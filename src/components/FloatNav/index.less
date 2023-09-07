@@ -1,0 +1,59 @@
+// .remMixin() {
+//     @width: ~`Math.random()*100+'vw'`;
+//     @height: ~`Math.random()*100+'vh'`
+//     }
+
+// .floatAnimation {
+//     //随机浮动动画
+//     @keyframes randomFloat {
+//         0%{
+//             left: .remMixin()[@width];
+//             top: .remMixin()[@height];
+//         }
+//         100%{
+//             left: .remMixin()[@width];
+//             top: .remMixin()[@height];
+//         }
+//     }
+//     .animationer(@name,@time:2s,@count:1,@ease:ease-out,@fillmode:backwards){
+//         animation-name:@name;
+//         animation-duration:@time;
+//         animation-timing-function:@ease;
+//         animation-fill-mode:@fillmode;
+//         animation-iteration-count:@count;
+//       }
+//     .animationer(randomFloat,4s);
+// }
+
+.animationer(@name,@time:2s,@count:1,@ease:ease-out,@fillmode:backwards) {
+	animation-name: @name;
+	animation-duration: @time;
+	animation-timing-function: @ease;
+	animation-fill-mode: @fillmode;
+	animation-iteration-count: @count;
+}
+
+//透明度变化动画
+.floatAnimation {
+	@keyframes opacityChange {
+		0% {
+			opacity: 1;
+		}
+		30% {
+			opacity: 0;
+		}
+		80% {
+			opacity: 1;
+		}
+	}
+	.animationer(opacityChange, 5s, infinite);
+}
+
+.float-nav {
+	background-color: green;
+	z-index: 1;
+	position: absolute;
+	transition: left 3s, top 3s;
+	transition-timing-function: ease-in-out;
+	.floatAnimation;
+}

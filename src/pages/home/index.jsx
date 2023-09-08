@@ -1,48 +1,66 @@
-import React, { useEffect, useChangeFloatNav, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { Card, Avatar, Button, Switch } from 'antd'
+import {useDispatch} from 'react-redux'
 import {
 	EnvironmentOutlined,
 	GithubOutlined,
 	ReadOutlined
 } from '@ant-design/icons'
-import FloatNav from '../../components/FloatNav'
-import HomeLoading from '../../components/HomeLoading'
+import FloatNav from './FloatNav'
+import HomeLoading from './HomeLoading'
 import avatarImg from '/src/assets/images/avatar.jpg'
 import './index.less'
+import { open as openFloatNav, close as closeFloatNav} from '@/store/floatNav.js'
+
 const Home = () => {
+  const dispatch = useDispatch()
+
 	const floatNavList = [
 		{
 			bgc: 'green',
-			title: '职业'
+			title: '职业',
+			route: '/career'
 		},
 		{
-			bgc: 'blue',
-			title: '足迹'
+			bgc: '#1c6679',
+			title: '足迹',
+			route: '/travel'
 		},
 		{
-			bgc: 'gray',
-			title: '兴趣'
+			bgc: 'yellowgreen',
+			title: '兴趣',
+			route: '/hobby'
 		},
 		{
-			bgc: 'pink',
-			title: '社交'
+			bgc: '#f86b05',
+			title: '作品',
+			route: '/works'
 		},
 		{
-			bgc: 'purple',
-			title: '逻辑'
+			bgc: '#e84033',
+			title: '最近',
+			route: '/recent'
 		}
 	]
-	// const floatNavRef = useRef()
-	useEffect(() => {}, [])
+	const ChangeFloatNav = (mode)=> {
+		mode ? dispatch(openFloatNav()) : dispatch(closeFloatNav())
+	}
+
+	useEffect(() => {
+	}, [])
 	return (
 		<div className='home'>
-			{/* <Switch defaultChecked onChange={useChangeFloatNav} /> */}
 			{/* <HomeLoading></HomeLoading> */}
 			<FloatNav list={floatNavList}></FloatNav>
-			{/* <FloatNav imageSrc='/src/assets/images/floatNav.png'></FloatNav> */}
-			{/* <FloatNav imageSrc='/src/assets/images/floatNav.png'></FloatNav> */}
 
 			<div className='item item1'>
+				<Switch
+					defaultChecked
+					onChange={(mode)=>{ChangeFloatNav(mode)}}
+					checkedChildren='动态'
+					unCheckedChildren='静止'
+					className='changeFloatNav'
+				/>
 				<Card
 					hoverable
 					cover={<img alt='example' src={avatarImg} />}

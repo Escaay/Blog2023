@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { Card, Avatar, Button, Switch } from 'antd'
+import { Card, Avatar, Button, Switch, Row, Col } from 'antd'
 import {useDispatch} from 'react-redux'
 import {
 	EnvironmentOutlined,
@@ -49,6 +49,8 @@ const Home = () => {
 	useEffect(() => {
 	}, [])
 	return (
+		<Row>
+			<Col span={24}>
 		<div className='home'>
 			{/* <HomeLoading></HomeLoading> */}
 			<FloatNav list={floatNavList}></FloatNav>
@@ -69,19 +71,19 @@ const Home = () => {
 					<div className='title'>
 						<div className='name'>邱文京</div>
 						<div className='location'>
-							<EnvironmentOutlined style={{ fontSize: '20px' }} />
+							<EnvironmentOutlined style={{ fontSize: '0.5rem' }} />
 							<span>中国·上海</span>
 						</div>
 						<div className='job'>前端工程师</div>
 						<div className='csdn'>
 							<a href='https://blog.csdn.net/Aays2790' target='_blank'>
-								<ReadOutlined style={{ fontSize: '20px' }} />
+								<ReadOutlined style={{ fontSize: '0.5rem' }} />
 								CSDN技术博客
 							</a>
 						</div>
 						<div className='github'>
 							<a href='https://github.com/Escaay' target='_blank'>
-								<GithubOutlined style={{ fontSize: '20px' }} />
+								<GithubOutlined style={{ fontSize: '0.5rem' }} />
 								Github主页
 							</a>
 						</div>
@@ -117,6 +119,8 @@ const Home = () => {
 			></Card>
 		</div> */}
 		</div>
+		</Col>
+		</Row>
 	)
 }
 export default Home

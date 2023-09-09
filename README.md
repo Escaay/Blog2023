@@ -1,8 +1,3 @@
-# React + Vite
+PPI:根号 分辨率平方和/屏幕尺寸(对角线)，表示每英寸能容纳多少个像素，DPI则是印刷行业的每英尺墨汁尺寸
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Dpr:像素比：分辨率(物理像素)/设备独立像素(css像素)，说明网页上缩放的像素比例，比如iphone750的物理像素，但是在css上最多设置375像素，那么就是2倍屏

@@ -1,48 +1,68 @@
-import React, { useEffect, useChangeFloatNav, useRef } from 'react'
-import { Card, Avatar, Button, Switch } from 'antd'
+import React, { useEffect, useRef, useState } from 'react'
+import { Card, Avatar, Button, Switch, Row, Col } from 'antd'
+import {useDispatch} from 'react-redux'
 import {
 	EnvironmentOutlined,
 	GithubOutlined,
 	ReadOutlined
 } from '@ant-design/icons'
-import FloatNav from '../../components/FloatNav'
-import HomeLoading from '../../components/HomeLoading'
+import FloatNav from './FloatNav'
+import HomeLoading from './HomeLoading'
 import avatarImg from '/src/assets/images/avatar.jpg'
 import './index.less'
+import { open as openFloatNav, close as closeFloatNav} from '@/store/floatNav.js'
+
 const Home = () => {
+  const dispatch = useDispatch()
+
 	const floatNavList = [
 		{
 			bgc: 'green',
-			title: '职业'
+			title: '职业',
+			route: '/career'
 		},
 		{
-			bgc: 'blue',
-			title: '足迹'
+			bgc: '#1c6679',
+			title: '足迹',
+			route: '/travel'
 		},
 		{
-			bgc: 'gray',
-			title: '兴趣'
+			bgc: 'yellowgreen',
+			title: '兴趣',
+			route: '/hobby'
 		},
 		{
-			bgc: 'pink',
-			title: '社交'
+			bgc: '#f86b05',
+			title: '作品',
+			route: '/works'
 		},
 		{
-			bgc: 'purple',
-			title: '逻辑'
+			bgc: '#e84033',
+			title: '最近',
+			route: '/recent'
 		}
 	]
-	// const floatNavRef = useRef()
-	useEffect(() => {}, [])
+	const ChangeFloatNav = (mode)=> {
+		mode ? dispatch(openFloatNav()) : dispatch(closeFloatNav())
+	}
+
+	useEffect(() => {
+	}, [])
 	return (
+		<Row>
+			<Col span={24}>
 		<div className='home'>
-			{/* <Switch defaultChecked onChange={useChangeFloatNav} /> */}
 			{/* <HomeLoading></HomeLoading> */}
 			<FloatNav list={floatNavList}></FloatNav>
-			{/* <FloatNav imageSrc='/src/assets/images/floatNav.png'></FloatNav> */}
-			{/* <FloatNav imageSrc='/src/assets/images/floatNav.png'></FloatNav> */}
 
 			<div className='item item1'>
+				<Switch
+					defaultChecked
+					onChange={(mode)=>{ChangeFloatNav(mode)}}
+					checkedChildren='动态'
+					unCheckedChildren='静止'
+					className='changeFloatNav'
+				/>
 				<Card
 					hoverable
 					cover={<img alt='example' src={avatarImg} />}
@@ -51,19 +71,19 @@ const Home = () => {
 					<div className='title'>
 						<div className='name'>邱文京</div>
 						<div className='location'>
-							<EnvironmentOutlined style={{ fontSize: '20px' }} />
+							<EnvironmentOutlined style={{ fontSize: '0.5rem' }} />
 							<span>中国·上海</span>
 						</div>
 						<div className='job'>前端工程师</div>
 						<div className='csdn'>
 							<a href='https://blog.csdn.net/Aays2790' target='_blank'>
-								<ReadOutlined style={{ fontSize: '20px' }} />
+								<ReadOutlined style={{ fontSize: '0.5rem' }} />
 								CSDN技术博客
 							</a>
 						</div>
 						<div className='github'>
 							<a href='https://github.com/Escaay' target='_blank'>
-								<GithubOutlined style={{ fontSize: '20px' }} />
+								<GithubOutlined style={{ fontSize: '0.5rem' }} />
 								Github主页
 							</a>
 						</div>
@@ -99,6 +119,8 @@ const Home = () => {
 			></Card>
 		</div> */}
 		</div>
+		</Col>
+		</Row>
 	)
 }
 export default Home

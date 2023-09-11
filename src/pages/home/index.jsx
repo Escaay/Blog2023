@@ -71,30 +71,30 @@ const Home = () => {
 					<div className='title'>
 						<div className='name'>邱文京</div>
 						<div className='location'>
-							<EnvironmentOutlined style={{ fontSize: '0.5rem' }} />
+							<EnvironmentOutlined />
 							<span>中国·上海</span>
 						</div>
 						<div className='job'>前端工程师</div>
 						<div className='csdn'>
 							<a href='https://blog.csdn.net/Aays2790' target='_blank'>
-								<ReadOutlined style={{ fontSize: '0.5rem' }} />
+								<ReadOutlined />
 								CSDN技术博客
 							</a>
 						</div>
 						<div className='github'>
 							<a href='https://github.com/Escaay' target='_blank'>
-								<GithubOutlined style={{ fontSize: '0.5rem' }} />
+								<GithubOutlined />
 								Github主页
 							</a>
 						</div>
 					</div>
 				</Card>
 			</div>
-			{/* <div className='item item2'>
+			<div className='item item2'>
 			<Card
 				hoverable
 				style={{
-					width: 240
+					width: '10vmax'
 				}}
 				cover={
 					<img
@@ -103,7 +103,7 @@ const Home = () => {
 					/>
 				}
 			></Card>
-		</div> */}
+		</div>
 			{/* <div className='item item3'>
 			<Card
 				hoverable

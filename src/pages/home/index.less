@@ -1,27 +1,32 @@
 .home {
-	overflow-x: hidden;
 	.item {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
 		background-size: cover;
-		min-height: 100vh
+		min-height: 100vh;
 	}
 	.item1 {
 		position: relative;
 		background-image: url('@/assets/images/bg1.jpg');
 		.changeFloatNav {
-			width: 3rem;
+			width: 10vmax;
 			position: absolute;
-			top: 3vw;
-			right: 3vw;
+			top: 2vmax;
+			right: 2vmax;
+		}
+		@media screen and (min-width: 850px) {
+			.changeFloatNav {
+				width: 87px;
+			}
 		}
 		.my-card {
 			text-align: center;
-			font-size: 0.4rem;
-			width: 5rem;
-			height: 9rem;
+			font-size: 1.5vmax;
+			width: 20vmax;
+			// width: 20vw;
+			// height: 30vw;
 			// @media screen and (min-width: 800px) {
 			// 	width: 40vw !important;
 			// }
@@ -31,9 +36,8 @@
 
 			.title {
 				// antd的组件用css3变换的方式往上移
-				transform: translateY(-10%);
 				.name {
-					font-size: 0.5rem;
+					font-size: 2vmax;
 				}
 				.location {
 				}

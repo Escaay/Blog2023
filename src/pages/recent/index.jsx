@@ -1,6 +1,11 @@
 import React from 'react'
 import { SmileOutlined, CarTwoTone } from '@ant-design/icons'
 import { Timeline, Row, Col, Pagination, Avatar } from 'antd'
+import gaotieIcon from '/images/gaotie.png'
+import happyIcon from '/images/happy.png'
+import planeIcon from '/images/plane.png'
+import bikeIcon from '/images/bike.png'
+import sleepIcon from '/images/sleep.png'
 import './index.less'
 const onChange = (pageNumber) => {
 	console.log('Page: ', pageNumber)
@@ -19,7 +24,7 @@ const data = [
 	{
 		dot: (
 			<Avatar
-				src='/src/assets/images/bike.png'
+				src={<img alt='example' src={bikeIcon}/>}
 				size='small'
 				shape='square'
 			></Avatar>
@@ -36,7 +41,7 @@ const data = [
 	},
 	{
 		dot: <Avatar
-		src='/src/assets/images/sleep.png'
+		src={<img alt='example' src={sleepIcon}/>}
 		size='small'
 		shape='square'
 	></Avatar>,
@@ -50,7 +55,7 @@ const data = [
 	},
 	{
 		dot: <Avatar
-		src='/src/assets/images/happy.png'
+		src={<img alt='example' src={happyIcon}/>}
 		size='small'
 		shape='square'
 	></Avatar>,
@@ -65,7 +70,7 @@ const data = [
 	{
 		dot: (
 			<Avatar
-				src='/src/assets/images/plane.png'
+			src={<img alt='example' src={planeIcon}/>}
 				size='small'
 				shape='square'
 			></Avatar>
@@ -73,30 +78,58 @@ const data = [
 		children: (
 			<>
 				<p>上海-----&gt;潍坊</p>
-				<p>-----2023.9.4~9.8</p>
+				<p>-----2023.8.25</p>
 				<p>&nbsp;</p>
 			</>
 		)
 	},
 	{
-		color: '#00CCFF',
-		dot: <SmileOutlined />,
-		children: <p>Custom color testing</p>
-	},
-	{
-		color: 'gray',
+		dot: (
+			<Avatar
+			src={<img alt='example' src={gaotieIcon}/>}
+				size='small'
+				shape='square'
+			></Avatar>
+		),
 		children: (
 			<>
-				<p>Technical testing 1</p>
-				<p>Technical testing 2</p>
-				<p>Technical testing 3 2015-09-01</p>
+				<p>潍坊-----&gt;青岛</p>
+				<p>-----2023.8.26</p>
+				<p>&nbsp;</p>
 			</>
 		)
 	},
 	{
-		color: '#00CCFF',
-		dot: <SmileOutlined />,
-		children: <p>Custom color testing</p>
+		dot: (
+			<Avatar
+			src={<img alt='example' src={gaotieIcon}/>}
+				size='small'
+				shape='square'
+			></Avatar>
+		),
+		children: (
+			<>
+				<p>青岛-----&gt;石家庄</p>
+				<p>-----2023.8.26</p>
+				<p>&nbsp;</p>
+			</>
+		)
+	},
+	{
+		dot: (
+			<Avatar
+			src={<img alt='example' src={gaotieIcon}/>}
+				size='small'
+				shape='square'
+			></Avatar>
+		),
+		children: (
+			<>
+				<p>石家庄-----&gt;北京</p>
+				<p>-----2023.8.28</p>
+				<p>&nbsp;</p>
+			</>
+		)
 	},
 	{
 		color: 'gray',

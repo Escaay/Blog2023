@@ -8,7 +8,7 @@ import {
 } from '@ant-design/icons'
 import FloatNav from './FloatNav'
 import HomeLoading from './HomeLoading'
-import avatarImg from '/src/assets/images/avatar.jpg'
+import avatarImg from '/images/avatar.jpg'
 import './index.less'
 import { open as openFloatNav, close as closeFloatNav} from '@/store/floatNav.js'
 
@@ -17,28 +17,28 @@ const Home = () => {
 
 	const floatNavList = [
 		{
-			bgc: 'green',
+			bgc: 'rgb(99, 211, 99)',
 			title: '职业',
 			route: '/career'
 		},
+		// {
+		// 	bgc: '#1c6679',
+		// 	title: '足迹',
+		// 	route: '/travel'
+		// },
+		// {
+		// 	bgc: 'yellowgreen',
+		// 	title: '兴趣',
+		// 	route: '/hobby'
+		// },
 		{
-			bgc: '#1c6679',
-			title: '足迹',
-			route: '/travel'
-		},
-		{
-			bgc: 'yellowgreen',
-			title: '兴趣',
-			route: '/hobby'
-		},
-		{
-			bgc: '#f86b05',
+			bgc: 'rgb(80, 193, 208)',
 			title: '作品',
 			route: '/works'
 		},
 		{
-			bgc: '#e84033',
-			title: '最近',
+			bgc: 'rgb(252, 83, 47)',
+			title: '日记',
 			route: '/recent'
 		}
 	]
@@ -90,7 +90,7 @@ const Home = () => {
 					</div>
 				</Card>
 			</div>
-			<div className='item item2'>
+			{/* <div className='item item2'>
 			<Card
 				hoverable
 				style={{
@@ -103,7 +103,7 @@ const Home = () => {
 					/>
 				}
 			></Card>
-		</div>
+		</div> */}
 			{/* <div className='item item3'>
 			<Card
 				hoverable

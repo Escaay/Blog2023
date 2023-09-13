@@ -7,7 +7,7 @@ import {
 	GithubOutlined,
 	ReadOutlined
 } from '@ant-design/icons'
-import FloatNav from './FloatNav'
+import FloatNav from './FloatNav' 
 import HomeLoading from './HomeLoading'
 import avatarImg from '/images/avatar.jpg'
 import './index.less'
@@ -15,10 +15,12 @@ import {
 	open as openFloatNav,
 	close as closeFloatNav
 } from '@/store/floatNav.js'
+import RouterTransition from '@/components/RouterTransition'
 
 const Home = () => {
 	const dispatch = useDispatch()
-
+	const ref1 = useRef(null)
+	const ref2 = useRef(null)
 	const floatNavList = [
 		{
 			bgc: 'rgb(99, 211, 99)',
@@ -53,48 +55,46 @@ const Home = () => {
 	useEffect(() => {
 		setTimeout(() => {
 			setLoading(false)
-		}, 2000)
+		}, 1300)
 	}, [])
 	const [loading, setLoading] = useState(true) //是否加载中
 
 	return (
-		<>
-			{/* 骨架屏 */}
-			{/* {
-			loading
-			?
-			<div className="Skeleton">
-							<Skeleton.Image active={true} className='avatarSkt'/>
-							<div className="floatNavSkt">
-							<Skeleton.Node active={true} className='floatNavSktItem'>
-							<Avatar
-							size={{ xs: 80, sm: 80, md: 80, lg: 64, xl: 80, xxl: 100 }}
-						>
-						</Avatar>
-        </Skeleton.Node>
-				<Skeleton.Node active={true} className='floatNavSktItem'>
-							<Avatar
-							size={{ xs: 80, sm: 80, md: 80, lg: 64, xl: 80, xxl: 100 }}
-						>
-						</Avatar>
-        </Skeleton.Node>
-				<Skeleton.Node active={true} className='floatNavSktItem'>
-							<Avatar
-							size={{ xs: 80, sm: 80, md: 80, lg: 64, xl: 80, xxl: 100 }}
-						>
-						</Avatar>
-        </Skeleton.Node>
-							</div>
-							<div className="spin">
-							<Spin size='large'>
-							</Spin>
-							<div className='text'>加载中</div>
-							</div>
-				</div>
-			:
-			''
-		} */}
-
+		// 	{/* 骨架屏 */}
+		// 	{/* {
+		// 	loading
+		// 	?
+		// 	<div className="Skeleton">
+		// 					<Skeleton.Image active={true} className='avatarSkt'/>
+		// 					<div className="floatNavSkt">
+		// 					<Skeleton.Node active={true} className='floatNavSktItem'>
+		// 					<Avatar
+		// 					size={{ xs: 80, sm: 80, md: 80, lg: 64, xl: 80, xxl: 100 }}
+		// 				>
+		// 				</Avatar>
+    //     </Skeleton.Node>
+		// 		<Skeleton.Node active={true} className='floatNavSktItem'>
+		// 					<Avatar
+		// 					size={{ xs: 80, sm: 80, md: 80, lg: 64, xl: 80, xxl: 100 }}
+		// 				>
+		// 				</Avatar>
+    //     </Skeleton.Node>
+		// 		<Skeleton.Node active={true} className='floatNavSktItem'>
+		// 					<Avatar
+		// 					size={{ xs: 80, sm: 80, md: 80, lg: 64, xl: 80, xxl: 100 }}
+		// 				>
+		// 				</Avatar>
+    //     </Skeleton.Node>
+		// 					</div>
+		// 					<div className="spin">
+		// 					<Spin size='large'>
+		// 					</Spin>
+		// 					<div className='text'>加载中</div>
+		// 					</div>
+		// 		</div>
+		// 	:
+		// 	''
+		// } */}
 			<Row>
 				<Col span={24}>
 					<div className='home'>
@@ -102,7 +102,7 @@ const Home = () => {
 							{/* <HomeLoading></HomeLoading> */}
 							{loading ? (
 								<div className='Skeleton'>
-									<Skeleton.Image active={true} className='avatarSkt' />
+									<Skeleton.Image active={true} className='avatarSkt'/>
 									<div className='floatNavSkt'></div>
 									<div className='spin'>
 										<Spin size='large'></Spin>
@@ -185,7 +185,6 @@ const Home = () => {
 					</div>
 				</Col>
 			</Row>
-		</>
 	)
 }
 export default Home

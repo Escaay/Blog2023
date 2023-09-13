@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { BrowserRouter } from 'react-router-dom'
-import Router from './Router.jsx'
+import Router from './router.jsx'
 import './global.less'
 import { store } from './store'
 import { Provider } from 'react-redux'

@@ -1,3 +1,41 @@
+.Skeleton {
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	.avatarSkt {
+		width: 20vmax !important;
+		height: 35vmax !important;
+		background-color: aliceblue;
+	}
+	.floatNavSkt {
+		display: flex;
+		.floatNavSktItem {
+			margin: 10px;
+		}
+	}
+	.spin {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: absolute;
+		flex-direction: column;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+		.spinIcon {
+			font-size: 3rem;
+			width: 10vmax;
+		}
+		.text {
+			color: gray;
+			margin-top: 1vmax;
+			text-align: center;
+		}
+	}
+}
+
 .home {
 	.item {
 		display: flex;

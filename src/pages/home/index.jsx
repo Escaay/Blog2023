@@ -55,7 +55,7 @@ const Home = () => {
 	useEffect(() => {
 		setTimeout(() => {
 			setLoading(false)
-		}, 1300)
+		}, 1000)
 	}, [])
 	const [loading, setLoading] = useState(true) //是否加载中
 

@@ -7,9 +7,14 @@ const RouterTransition= (props)=> {
   },[])
   console.log(props);
   return (
+    <>
     <div className={transitionClass}>
       {props.children[1]}
     </div>
+    <div>
+      {props.children[2]}
+    </div>
+    </>
   )
 }
 export default RouterTransition

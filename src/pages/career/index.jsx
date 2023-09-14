@@ -13,17 +13,17 @@ const treeData = [
         isLeaf: true,
       },
       {
-        title: '初学前端三剑客',
+        title: '前端三剑客',
         key: '0-1',
         isLeaf: true,
       },
 			{
-        title: 'css3和js制作特效',
+        title: '制作动效',
         key: '0-2',
         isLeaf: true,
       },
 			{
-        title: '服务器和虚拟机',
+        title: '了解服务器',
         key: '0-3',
         isLeaf: true,
       },
@@ -34,29 +34,39 @@ const treeData = [
     key: '1',
     children: [
       {
-        title: '网页',
+        title: '组件化开发',
         key: '1-0',
         isLeaf: true,
       },
       {
-        title: 'leaf 1-1',
+        title: '页面布局',
         key: '1-1',
+        isLeaf: true,
+      },
+			{
+        title: 'puppteer爬虫',
+        key: '1-2',
         isLeaf: true,
       },
     ],
   },
 	{
-    title: '',
+    title: '略有小成',
     key: '2',
     children: [
       {
-        title: 'leaf 1-0',
+        title: 'React探索',
         key: '2-0',
         isLeaf: true,
       },
       {
-        title: 'leaf 1-1',
+        title: '前端工程化',
         key: '2-1',
+        isLeaf: true,
+      },
+			{
+        title: '逻辑思维',
+        key: '2-2',
         isLeaf: true,
       },
     ],

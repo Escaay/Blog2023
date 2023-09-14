@@ -4,11 +4,11 @@ import './index.less'
 const { DirectoryTree } = Tree;
 const treeData = [
   {
-    title: 'parent 0',
+    title: 'RT-thread实习记录',
     key: '0-0',
     children: [
       {
-        title: 'leaf 0-0',
+        title: '123',
         key: '0-0-0',
         isLeaf: true,
       },
@@ -44,6 +44,8 @@ const Works = () => {
     console.log('Trigger Expand', keys, info);
   };
   return (
+		<div className="works">
+			<div className="left">
     <DirectoryTree
       multiple
       defaultExpandAll
@@ -51,6 +53,11 @@ const Works = () => {
       onExpand={onExpand}
       treeData={treeData}
     />
+		</div>
+		<div className="right">
+			内容区
+		</div>
+		</div>
   );
 };
 export default Works;

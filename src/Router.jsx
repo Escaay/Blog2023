@@ -1,11 +1,11 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
 import Home from './pages/home'
 const Career = React.lazy(() => import('./pages/career'))
 const Travel = React.lazy(() => import('./pages/travel'))
 const Hobby = React.lazy(() => import('./pages/hobby'))
 const Recent = React.lazy(() => import('./pages/recent'))
 const Works = React.lazy(() => import('./pages/works'))
-
+import './Router.less'
 import { Routes, Route, Outlet } from 'react-router-dom'
 
 function Router() {

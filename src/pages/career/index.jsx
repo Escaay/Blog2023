@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Tree } from 'antd';
 import './index.less'
 const { DirectoryTree } = Tree;
@@ -73,25 +73,39 @@ const treeData = [
   },
 ];
 const Career = () => {
+	const [leftClass,setLeftClass] = useState("left")
+	const [rightClass,setRightClass] = useState(["right"])
   const onSelect = (keys, info) => {
     console.log('Trigger Select', keys, info);
   };
   const onExpand = (keys, info) => {
     console.log('Trigger Expand', keys, info);
   };
+	const changNav = ()=> {
+		if(leftClass === 'left') {
+			setLeftClass("left left-show")
+			setRightClass("right right-show")
+		}else {
+			setLeftClass("left")
+			setRightClass("right")
+		}
+	}
   return (
 		<div className="career">
+		<div className={leftClass}>
+		<img src="/images/career_nav.png" onClick={changNav}/>
     <DirectoryTree
       multiple
       defaultExpandAll
       onSelect={onSelect}
       onExpand={onExpand}
       treeData={treeData}
-			className="left"
+			className="nav-content"
     />
-		<div className="right">
-			内容区
 		</div>
+		<div className={rightClass}>
+			内容区
+		</div>	
 		</div>
   );
 };

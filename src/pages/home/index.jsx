@@ -55,7 +55,7 @@ const Home = () => {
 	useEffect(() => {
 		setTimeout(() => {
 			setLoading(false)
-		}, 1000)
+		}, 300)
 	}, [])
 	const [loading, setLoading] = useState(true) //是否加载中
 
@@ -123,7 +123,7 @@ const Home = () => {
 									/>
 									<Card
 										hoverable
-										cover={<img alt='example' src={avatarImg} />}
+										cover={<img alt='example' src={avatarImg} style={{borderRadius:'50%',width: '15vmax'}}/>}
 										className='my-card'
 									>
 										<div className='title'>

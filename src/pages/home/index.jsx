@@ -127,10 +127,10 @@ const Home = () => {
 										className='my-card'
 									>
 										<div className='title'>
-											<div className='name'>邱文京</div>
+											<div className='name'>风无迁</div>
 											<div className='location'>
 												<EnvironmentOutlined />
-												<span>中国·上海</span>
+												<span>中国-上海</span>
 											</div>
 											<div className='job'>前端工程师</div>
 											<div className='csdn'>

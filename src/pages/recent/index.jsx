@@ -179,12 +179,12 @@ const Recent = () => {
 	return (
 		<div className='recent'>
 			<Timeline className='timeLine' items={items} />
-			<Pagination
+			{/* <Pagination
 				showQuickJumper
 				defaultCurrent={2}
 				total={500}
 				onChange={onChange}
-			/>
+			/> */}
 		</div>
 	)
 }

@@ -109,7 +109,7 @@ const Career = () => {
 		<div className='right'>
     <div className='cards-item'>
 		{/* 手游--&gt;我的世界--&gt;开私服--&gt;需要phar后缀插件--&gt;解包插件发现php--&gt;魔改php--&gt;自学php */}
-		待补充
+		    待补充
     </div>
 		</div>
 		</div>

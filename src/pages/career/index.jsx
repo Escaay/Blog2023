@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { Tree } from 'antd';
+import { Tree, Carousel } from 'antd';
 import './index.less'
 const { DirectoryTree } = Tree;
 const treeData = [
@@ -73,26 +73,29 @@ const treeData = [
   },
 ];
 const Career = () => {
-	const [leftClass,setLeftClass] = useState("left")
-	const [rightClass,setRightClass] = useState(["right"])
+	const [containerClass,setContainerClass] = useState("container")
   const onSelect = (keys, info) => {
     console.log('Trigger Select', keys, info);
   };
+	/**
+	 * 
+	 * @param {array} keys 子节点的键数组
+	 * @param {object} info 展开/收起的节点信息 
+	 */
   const onExpand = (keys, info) => {
     console.log('Trigger Expand', keys, info);
   };
 	const changNav = ()=> {
-		if(leftClass === 'left') {
-			setLeftClass("left left-show")
-			setRightClass("right right-show")
+		if(containerClass === 'container') {
+			setContainerClass("container container-show")
 		}else {
-			setLeftClass("left")
-			setRightClass("right")
+			setContainerClass("container")
 		}
 	}
   return (
 		<div className="career">
-		<div className={leftClass}>
+			<div className={containerClass}>
+		<div className='left'>
 		<img src="/images/career_nav.png" onClick={changNav}/>
     <DirectoryTree
       multiple
@@ -103,9 +106,13 @@ const Career = () => {
 			className="nav-content"
     />
 		</div>
-		<div className={rightClass}>
-			内容区
-		</div>	
+		<div className='right'>
+    <div className='cards-item'>
+		{/* 手游--&gt;我的世界--&gt;开私服--&gt;需要phar后缀插件--&gt;解包插件发现php--&gt;魔改php--&gt;自学php */}
+		待补充
+    </div>
+		</div>
+		</div>
 		</div>
   );
 };

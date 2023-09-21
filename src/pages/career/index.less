@@ -5,65 +5,82 @@
 	background-color: #93aee5;
 	min-height: 100vh;
 
-	.left {
-		position: relative;
+	.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;  
 		transform: translate(-30vmax, 0);
 		transition: transform 1s;
 		transition-timing-function: ease-in-out;
-
-		img {
-			z-index: 3;
-			width: 5vmax;
-			height: 5vmax;
-			position: absolute;
-			right: -5vmax;
-			top: 0;
-			transition: right 1s;
-		}
-
-		.nav-content {
-			width: 30vmax;
-			position: relative;
-			padding: 2vmax;
-		}
-	}
-
-	.right {
-		z-index: 4;
-		transform: translate(-30vmax, 0);
-		transition: transform 1s;
-		color: white;
-		flex: 1;
-	}
-
-	.left-show {
-		transform: translate(0, 0);
-
-		img {
-			right: 0;
-		}
-	}
-
-	.right-show {
-		transform: translate(0, 0);
-	}
-
-	@media screen and (min-width: 992px) {
+    flex: 1;
+    
 		.left {
-			transform: translate(0, 0);
+			position: relative;
 
 			img {
-				display: none;
-				right: 0;
+				z-index: 3;
+				width: 5vmax;
+				height: 5vmax;
+				position: absolute;
+				right: -5vmax;
+				top: 0;
+				transition: right 1s, transform 1s;
 			}
 
 			.nav-content {
-				max-width: 20vmax;
+				width: 30vmax;
+				position: relative;
+				padding: 2vmax;
 			}
 		}
 
 		.right {
-			transform: translate(0, 0);
+			margin: 0 10vmax;
+			z-index: 4;
+			// transform: translate(-30vmax, 0); 
+			// transition: transform 1s;
+      flex: 1;
+			color: white;
+			.cards-item {
+				border-radius: 20px;
+				border: 2px solid rgb(230, 246, 192);
+				background-color: #364d79;
+				text-align: center;
+				min-height: 20vmax;
+			}
 		}
+
 	}
+  .container-show {
+    transform: translate(0, 0);
+    img {
+      transform: rotate(720deg);
+      right: 0;
+    }
+  }
+}
+@media screen and (min-width: 992px) {
+  .career {
+    .container {
+      transform: translate(0, 0);
+
+    .left {
+      // transform: translate(0, 0);
+
+      img {
+        display: none;
+        right: 0;
+      }
+
+      .nav-content {
+        max-width: 20vmax;
+      }
+    }
+
+    .right {
+      // transform: translate(0, 0);
+    }
+  }
+    }
+
 }

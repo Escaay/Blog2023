@@ -5,7 +5,8 @@ import { useDispatch } from 'react-redux'
 import {
 	EnvironmentOutlined,
 	GithubOutlined,
-	ReadOutlined
+	ReadOutlined,
+	MailOutlined
 } from '@ant-design/icons'
 import FloatNav from './FloatNav' 
 import HomeLoading from './HomeLoading'
@@ -55,7 +56,7 @@ const Home = () => {
 	useEffect(() => {
 		setTimeout(() => {
 			setLoading(false)
-		}, 300)
+		}, 500)
 	}, [])
 	const [loading, setLoading] = useState(true) //是否加载中
 
@@ -131,6 +132,10 @@ const Home = () => {
 											<div className='location'>
 												<EnvironmentOutlined />
 												<span>中国-上海</span>
+											</div>
+											<div className='email'>
+												<MailOutlined />
+												<span>&nbsp;2790751195@qq.com</span>
 											</div>
 											<div className='job'>前端工程师</div>
 											<div className='csdn'>

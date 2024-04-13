@@ -5,6 +5,22 @@ import { Avatar, List, Space } from 'antd';
 const data = [
 	{
 		href:'https://blog.csdn.net/Aays2790/article/details/131933891?spm=1001.2014.3001.5502',
+		image:'/images/works/work12.png',
+		content:'',
+		description:'需求背景: 做一个富文本编辑器，只保留有序列表，无序列表，超链接，普通文本四种形式。 1.quill配置toolbar保留四种形式的工具栏 2.此外，还要防止粘贴时出现不允许的数据格式 解决办法 监听paste粘贴事件，阻断粘贴默认行为，拿到剪切板的值，清洗掉不需要的标签和属性后，自行插入到innerHTML 难点 在自行插入时我们需要知道插入的位置，但是我们的quill或者web api只给我们提供了纯文本的光标索引, 例如光标在input里面选择了某个位置，那么可以在input的onclick回调通过event.tartget.selectionStart获取光标在innerText的索引',
+		title:'quill富文本编辑器获取光标所在innerHTML索引',
+		time:'2024-04-10 16:58:46',
+	},
+	{
+		href:'https://blog.csdn.net/Aays2790/article/details/131933891?spm=1001.2014.3001.5502',
+		image:'/images/works/work11.png',
+		content:'',
+		description:'主要功能：红灯2秒后转黄灯，黄灯1秒后转绿灯1.用时间补偿法纠正定时器 2.用闭包避免污染全局变量',
+		title:'js手写红绿灯（带优化版）',
+		time:'2023-10-20 18:00:40',
+	},
+	{
+		href:'https://blog.csdn.net/Aays2790/article/details/131933891?spm=1001.2014.3001.5502',
 		image:'/images/works/work6.png',
 		content:'',
 		description:'最近在公司实习写的是es5，在和回调地狱经过一番拉扯之后写下这篇文章，也算是体验了一把没有promise的时代假设我们的div有一个日历列表，但是由于大小关系只能每次显示2天的信息，项目限制只能使用es5，不能使用es6的promise,且后端给我们的接口只能每次请求一个具体日期的数据，现在的需求是首屏加载2个item,有些人会觉得这还不简单吗，先请求第一个，再在回调里面请求第二个确实如此，那假如我们有20个，200个item呢，就会掉入回调地狱，还有一个问题就是前面的请求失败会导致后面的请求无法执行（即使后面的请求单独可用）那么新的问题来了，我们的日期列表需要按顺序展示，但是我们本地的数组是通过请求回来再在回调里存到数组中的，由于网络的不可控性，我们不知道哪个请求会先被返回回来，那么如何保证顺序呢',
@@ -123,6 +139,7 @@ const Works = () => (
           description={item.content}
         />
         <div className="description-text">{item.description}</div>
+		<div className="description-time">发布时间: {item.time}</div>
       </List.Item>
     )}
   />

@@ -47,7 +47,7 @@ export default function Travel() {
 	<div className="nav-bar-large">
 		<Link to='/'>首页</Link>
 		<Link to='/career'>职业</Link>
-		<Link to='/recent'>日记</Link>
+		<Link to='/recent'>最近</Link>
 		<Link to='/works'>作品</Link>
 	</div>
 	</div>

@@ -130,7 +130,7 @@ const Home = () => {
 											<div className='name'>风无迁</div>
 											<div className='location'>
 												<EnvironmentOutlined />
-												<span>中国-上海</span>
+												<span>中国-广东</span>
 											</div>
 											<div className='job'>前端工程师</div>
 											<div className='csdn'>

@@ -1,8 +1,7 @@
-import { defineConfig } from 'vite'
-import path from 'path'
-import react from '@vitejs/plugin-react'
-
-const resolve = (dir) => path.join(__dirname, dir)
+import { defineConfig } from "vite";
+import path from "path";
+import react from "@vitejs/plugin-react";
+const resolve = (dir) => path.join(__dirname, dir);
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -10,9 +9,9 @@ export default defineConfig({
   resolve: {
     alias: {
       // 根路径别名
-      '@': resolve('src'),
+      "@": resolve("src"),
     },
-    extensions: ['.tsx', '.ts', '.jsx', '.js', '.json'],
+    extensions: [".tsx", ".ts", ".jsx", ".js", ".json"],
   },
   css: {
     preprocessorOptions: {
@@ -21,4 +20,4 @@ export default defineConfig({
       },
     },
   },
-})
+});

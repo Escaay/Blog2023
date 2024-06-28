@@ -1,5 +1,5 @@
-import './index.less'
+import "./index.less";
 
 export default function Hobby() {
-	return <div>hobby</div>
+  return <div>hobby</div>;
 }

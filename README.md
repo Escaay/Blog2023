@@ -14,9 +14,7 @@ transition+随机数实现浮动球特效
 
 日记：时间轴+分页
 
-vite打包，github部署页面404问题解决：
-1.图片放到public/images下，路径直接写/images,不要在src下创建assets,打包识别不到的，public是指定目录
-2.加一个404.html,内容和  打包后！！！ 的index.html相同
+vite打包，github部署页面404问题解决：1.图片放到public/images下，路径直接写/images,不要在src下创建assets,打包识别不到的，public是指定目录2.加一个404.html,内容和 打包后！！！ 的index.html相同
 
 武学境界：
 1：不堪一击（菜鸟中的菜鸟）

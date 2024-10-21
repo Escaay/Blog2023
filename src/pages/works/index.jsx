@@ -106,6 +106,7 @@ const Works = () => (
       footer={<div>{/* <b>ant design</b> footer part */}</div>}
       renderItem={(item) => (
         <List.Item
+        style={{flexWrap: "nowrap"}}
           key={item.title}
           actions={
             [

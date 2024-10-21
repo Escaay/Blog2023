@@ -5,6 +5,7 @@ import {
   EnvironmentOutlined,
   GithubOutlined,
   ReadOutlined,
+  MailOutlined,
 } from "@ant-design/icons";
 import FloatNav from "./FloatNav";
 import avatarImg from "/images/avatar.jpg";
@@ -50,7 +51,7 @@ const Home = () => {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 300);
+    }, 500);
   }, []);
   const [loading, setLoading] = useState(true); //是否加载中
 
@@ -106,6 +107,41 @@ const Home = () => {
               </div>
             ) : (
               <>
+                <div className="new-work">
+                  <div className="new-work-title" style={{ color: "red", fontSize: 18 }}>最新作品地球村App内测：</div>
+                  <div className="new-work-item" style={{marginTop: 6}}>
+                    <a
+                      style={{ color: "yellowgreen" }}
+                      href="https://pan.baidu.com/s/1LELfIVxxt7-sfIPV71wy0Q#/home/%2F/%2F"
+                    >
+                      地球村APP-网盘下载(提取码1234)
+                    </a>
+                  </div>
+                  <div className="new-work-item" style={{marginTop: 6}}>
+                    <a
+                      style={{ color: "yellowgreen" }}
+                      href="https://github.com/Escaay/EarthVillage"
+                    >
+                      地球村APP-前端代码
+                    </a>
+                  </div>
+                  <div className="new-work-item" style={{marginTop: 6}}>
+                    <a
+                      style={{ color: "yellowgreen" }}
+                      href="https://github.com/Escaay/ev_server"
+                    >
+                      地球村APP-后端代码
+                    </a>
+                  </div>
+                  <div className="new-work-item" style={{marginTop: 6}}>
+                    <a
+                      style={{ color: "yellowgreen" }}
+                      href="https://github.com/Escaay/ev-websocket"
+                    >
+                      地球村APP-websocket服务
+                    </a>
+                  </div>
+                </div>
                 <FloatNav list={floatNavList}></FloatNav>
                 <Switch
                   defaultChecked
@@ -116,6 +152,7 @@ const Home = () => {
                   unCheckedChildren="静止"
                   className="changeFloatNav"
                 />
+
                 <Card
                   hoverable
                   cover={
@@ -131,19 +168,23 @@ const Home = () => {
                     <div className="name">风无迁</div>
                     <div className="location">
                       <EnvironmentOutlined />
-                      <span>中国-广东</span>
+                      <span>广东-深圳</span>
                     </div>
-                    <div className="job">前端工程师</div>
-                    <div className="csdn">
-                      <a href="https://blog.csdn.net/Aays2790" target="_blank" rel="noreferrer">
-                        <ReadOutlined />
-                        CSDN技术博客
-                      </a>
+                    <div className="email">
+                      <MailOutlined />
+                      <span>&nbsp;qwj2790751195@gmail.com</span>
                     </div>
+                    <div className="job">前端开发工程师</div>
                     <div className="github">
                       <a href="https://github.com/Escaay" target="_blank" rel="noreferrer">
                         <GithubOutlined />
                         Github主页
+                      </a>
+                    </div>
+                    <div className="csdn">
+                      <a href="https://blog.csdn.net/Aays2790" target="_blank" rel="noreferrer">
+                        <ReadOutlined />
+                        CSDN博客
                       </a>
                     </div>
                   </div>

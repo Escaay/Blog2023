@@ -108,13 +108,13 @@ const Home = () => {
             ) : (
               <>
                 <div className="new-work">
-                  <div className="new-work-title" style={{ color: "red", fontSize: 18 }}>最新作品地球村App内测：</div>
+                  <div className="new-work-title" style={{ color: "red", fontSize: 18 }}>最新作品游搭App内测：</div>
                   <div className="new-work-item" style={{marginTop: 6}}>
                     <a
                       style={{ color: "yellowgreen" }}
                       href="https://pan.baidu.com/s/1LELfIVxxt7-sfIPV71wy0Q#/home/%2F/%2F"
                     >
-                      地球村APP-网盘下载(提取码1234)
+                      游搭APP-网盘下载(提取码1234)
                     </a>
                   </div>
                   <div className="new-work-item" style={{marginTop: 6}}>
@@ -122,7 +122,7 @@ const Home = () => {
                       style={{ color: "yellowgreen" }}
                       href="https://github.com/Escaay/EarthVillage"
                     >
-                      地球村APP-前端代码
+                      游搭APP-前端代码
                     </a>
                   </div>
                   <div className="new-work-item" style={{marginTop: 6}}>
@@ -130,7 +130,7 @@ const Home = () => {
                       style={{ color: "yellowgreen" }}
                       href="https://github.com/Escaay/ev_server"
                     >
-                      地球村APP-后端代码
+                      游搭APP-后端代码
                     </a>
                   </div>
                   <div className="new-work-item" style={{marginTop: 6}}>
@@ -138,7 +138,7 @@ const Home = () => {
                       style={{ color: "yellowgreen" }}
                       href="https://github.com/Escaay/ev-websocket"
                     >
-                      地球村APP-websocket服务
+                      游搭APP-websocket服务
                     </a>
                   </div>
                 </div>

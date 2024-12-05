@@ -111,7 +111,15 @@ const Home = () => {
                   <div className="new-work-title" style={{ color: "red", fontSize: 18 }}>最新作品游搭App内测：</div>
                   <div className="new-work-item" style={{marginTop: 6}}>
                     <a
-                      style={{ color: "yellowgreen" }}
+                      style={{ color: "yellowgreen", textDecoration: "underline" }}
+                      href="http://xhslink.com/a/JMoWlARjZK10"
+                    >
+                      游搭APP-演示视频链接
+                    </a>
+                  </div>
+                  <div className="new-work-item" style={{marginTop: 6}}>
+                    <a
+                      style={{ color: "yellowgreen", textDecoration: "underline" }}
                       href="https://pan.baidu.com/s/1LELfIVxxt7-sfIPV71wy0Q#/home/%2F/%2F"
                     >
                       游搭APP-网盘下载(提取码1234)
@@ -119,7 +127,7 @@ const Home = () => {
                   </div>
                   <div className="new-work-item" style={{marginTop: 6}}>
                     <a
-                      style={{ color: "yellowgreen" }}
+                      style={{ color: "yellowgreen", textDecoration: "underline" }}
                       href="https://github.com/Escaay/EarthVillage"
                     >
                       游搭APP-前端代码
@@ -127,7 +135,7 @@ const Home = () => {
                   </div>
                   <div className="new-work-item" style={{marginTop: 6}}>
                     <a
-                      style={{ color: "yellowgreen" }}
+                      style={{ color: "yellowgreen", textDecoration: "underline" }}
                       href="https://github.com/Escaay/ev_server"
                     >
                       游搭APP-后端代码
@@ -135,7 +143,7 @@ const Home = () => {
                   </div>
                   <div className="new-work-item" style={{marginTop: 6}}>
                     <a
-                      style={{ color: "yellowgreen" }}
+                      style={{ color: "yellowgreen", textDecoration: "underline" }}
                       href="https://github.com/Escaay/ev-websocket"
                     >
                       游搭APP-websocket服务
